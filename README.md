@@ -1,99 +1,144 @@
-## react-base64-to-pdf
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>react-base64-to-pdf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        pre {
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow-x: auto;
+        }
+        code {
+            font-family: "Courier New", Courier, monospace;
+            background-color: #eaeaea;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        .props {
+            background-color: #eef;
+            border-left: 4px solid #88f;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        .note {
+            color: #555;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
 
-This React component library allows you to display, preview, and download Base64-encoded PDF files within your React applications. Integrate PDF viewing capabilities seamlessly!
+<h1>react-base64-to-pdf</h1>
 
-### Installation
+<p>A React component library for displaying, previewing, and downloading Base64-encoded PDF files. Easily integrate PDF viewing capabilities into your React applications.</p>
 
-To install the package, use npm:
+<h2>Installation</h2>
 
-```bash
-npm install react-base64-to-pdf
-```
+<p>You can install the package using npm:</p>
 
-````Usage
-Here's a basic example demonstrating how to use react-base64-to-pdf in your React application:
+<pre><code>npm install react-base64-to-pdf</code></pre>
 
-JavaScript
-import React from 'react';
+<h2>Usage</h2>
+
+<p>Here’s a quick example of how to use the <code>react-base64-to-pdf</code> library in your React application.</p>
+
+<h3>Basic Example</h3>
+
+<pre><code>import React from 'react';
 import { PDFInfo, PDFPreview, PDFDownloadButton } from 'react-base64-to-pdf';
 
 const App = () => {
-const base64Pdf = 'JVBERi0xLjUKJYCBgoMKMSA.....'; // Your Base64-encoded PDF string
+  const base64Pdf = 'JVBERi0xLjUKJYCBgoMKMSA.....'; // Your Base64-encoded PDF string
 
-return (
-<div>
-<h1>PDF Viewer Example</h1>
-
+  return (
+    &lt;div&gt;
+      &lt;h1&gt;PDF Viewer Example&lt;/h1&gt;
+      
       {/* Show PDF Information */}
-      <PDFInfo base64={base64Pdf} showDownloadButton={true} showPreview={true} />
+      &lt;PDFInfo base64={base64Pdf} showDownloadButton={true} showPreview={true} /&gt;
 
       {/* Download PDF Button */}
-      <PDFDownloadButton
-        base64={base64Pdf}
+      &lt;PDFDownloadButton 
+        base64={base64Pdf} 
         downloadFileName="your-file.pdf"
         style={{
           backgroundColor: 'blue',
           color: 'white',
           padding: '10px 20px',
           borderRadius: '5px',
-          textDecoration: 'none',
+          textDecoration: 'none'
         }}
-      />
-    </div>
+      /&gt;
+    &lt;/div&gt;
   );
 };
 
-export default App;```
+export default App;</code></pre>
 
+<h2>Components</h2>
 
+<h3>PDFInfo</h3>
 
-Use code with caution.
+<p>Displays the information of the PDF file such as file size, PDF version, creation date, modification date, and creator tool.</p>
 
-Components
-PDFInfo
+<div class="props">
+    <strong>Props</strong>
+    <ul>
+        <li><code>base64</code> (string): The Base64-encoded PDF string.</li>
+        <li><code>showDownloadButton</code> (boolean): (Optional) Whether to display the download button. Default is <code>false</code>.</li>
+        <li><code>showPreview</code> (boolean): (Optional) Whether to show the PDF preview. Default is <code>false</code>.</li>
+    </ul>
+</div>
 
-This component displays information about the PDF file, including:
+<h3>PDFPreview</h3>
 
-File size
-PDF version
-Creation date
-Modification date
-Creator tool
-Props:
+<p>Renders a preview of the PDF file.</p>
 
-base64 (string): Required. The Base64-encoded PDF string.
-showDownloadButton (boolean): Optional. Defaults to false. Set to true to display a download button.
-showPreview (boolean): Optional. Defaults to false. Set to true to display a PDF preview.
-PDFPreview
+<div class="props">
+    <strong>Props</strong>
+    <ul>
+        <li><code>base64</code> (string): The Base64-encoded PDF string.</li>
+    </ul>
+</div>
 
-This component renders a preview of the PDF file within your application.
+<h3>PDFDownloadButton</h3>
 
-Props:
+<p>Provides a button to download the PDF file.</p>
 
-base64 (string): Required. The Base64-encoded PDF string.
-PDFDownloadButton
+<div class="props">
+    <strong>Props</strong>
+    <ul>
+        <li><code>base64</code> (string): The Base64-encoded PDF string.</li>
+        <li><code>downloadFileName</code> (string): (Optional) The name of the downloaded file. Default is <code>file.pdf</code>.</li>
+        <li><code>style</code> (React.CSSProperties): (Optional) Custom styles for the button.</li>
+        <li><code>className</code> (string): (Optional) Custom class names for additional styling.</li>
+    </ul>
+</div>
 
-This component provides a button that allows users to download the PDF file.
+<h2>Contributing</h2>
 
-Props:
+<p>Contributions are welcome! Please read the <a href="link-to-contributing-guide">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests.</p>
 
-base64 (string): Required. The Base64-encoded PDF string.
-downloadFileName (string): Optional. Defaults to "file.pdf". Specify the desired file name for the download.
-style (React.CSSProperties): Optional. Customize the button's appearance with CSS properties.
-className (string): Optional. Add custom class names for further styling.
-Contributing
-We welcome contributions! Refer to the CONTRIBUTING.md file for details on our code of conduct and the pull request submission process.
+<h2>License</h2>
 
-License
-This project is licensed under the MIT License. See the LICENSE file for more information.
+<p>This project is licensed under the MIT License. See the <a href="link-to-license-file">LICENSE</a> file for details.</p>
 
-Contact
-For any inquiries or feedback, feel free to reach out at [28priyanshu2001@gmail.com].
+<h2>Contact</h2>
 
-Sources and related content
+<p>For any inquiries or feedback, feel free to reach out at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
 
-````
-
-```
-
-```
+</body>
+</html>
