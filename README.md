@@ -4,40 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>react-base64-to-pdf</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            margin: 20px;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        h1, h2, h3 {
-            color: #333;
-        }
-        pre {
-            background-color: #f0f0f0;
-            border: 1px solid #ddd;
-            padding: 10px;
-            overflow-x: auto;
-        }
-        code {
-            font-family: "Courier New", Courier, monospace;
-            background-color: #eaeaea;
-            padding: 2px 4px;
-            border-radius: 4px;
-        }
-        .props {
-            background-color: #eef;
-            border-left: 4px solid #88f;
-            padding: 10px;
-            margin: 10px 0;
-        }
-        .note {
-            color: #555;
-            font-size: 0.9em;
-        }
-    </style>
+ 
 </head>
 <body>
 
