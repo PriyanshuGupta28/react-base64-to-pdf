@@ -30,7 +30,6 @@ const PDFInfo: React.FC<PDFInfoProps> = ({ base64 }) => {
 
   return (
     <div>
-      <h3>PDF Information</h3>
       <p>File Size: {fileSize} KB</p>
       <p>PDF Version: {pdfVersion}</p>
       <p>Create Date: {createDate}</p>
