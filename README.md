@@ -93,13 +93,9 @@ export default App;</code></pre>
     </ul>
 </div>
 
-<h2>Contributing</h2>
-
-<p>Contributions are welcome! Please read the <a href="link-to-contributing-guide">CONTRIBUTING.md</a> for details on our code of conduct, and the process for submitting pull requests.</p>
-
 <h2>License</h2>
 
-<p>This project is licensed under the MIT License. See the <a href="link-to-license-file">LICENSE</a> file for details.</p>
+<p>This project is licensed under the MIT License. See the <a href="https://mit-license.org/">LICENSE</a> file for details.</p>
 
 <h2>Contact</h2>
 
