@@ -8,7 +8,9 @@ To install the package, use npm:
 
 ```bash
 npm install react-base64-to-pdf
-Usage
+```
+
+````Usage
 Here's a basic example demonstrating how to use react-base64-to-pdf in your React application:
 
 JavaScript
@@ -16,11 +18,11 @@ import React from 'react';
 import { PDFInfo, PDFPreview, PDFDownloadButton } from 'react-base64-to-pdf';
 
 const App = () => {
-  const base64Pdf = 'JVBERi0xLjUKJYCBgoMKMSA.....'; // Your Base64-encoded PDF string
+const base64Pdf = 'JVBERi0xLjUKJYCBgoMKMSA.....'; // Your Base64-encoded PDF string
 
-  return (
-    <div>
-      <h1>PDF Viewer Example</h1>
+return (
+<div>
+<h1>PDF Viewer Example</h1>
 
       {/* Show PDF Information */}
       <PDFInfo base64={base64Pdf} showDownloadButton={true} showPreview={true} />
@@ -41,7 +43,10 @@ const App = () => {
   );
 };
 
-export default App;
+export default App;```
+
+
+
 Use code with caution.
 
 Components
@@ -83,8 +88,12 @@ License
 This project is licensed under the MIT License. See the LICENSE file for more information.
 
 Contact
-For any inquiries or feedback, feel free to reach out at [your-email@example.com].  
-
+For any inquiries or feedback, feel free to reach out at [28priyanshu2001@gmail.com].
 
 Sources and related content
+
+````
+
+```
+
 ```
