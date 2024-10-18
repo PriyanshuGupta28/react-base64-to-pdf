@@ -103,7 +103,7 @@ export default App;</code></pre>
 
 <h2>Contact</h2>
 
-<p>For any inquiries or feedback, feel free to reach out at <a href="mailto:your-email@example.com">your-email@example.com</a>.</p>
+<p>For any inquiries or feedback, feel free to reach out at <a href="mailto:28priyanshu2001.com">your-email@example.com</a>.</p>
 
 </body>
 </html>
