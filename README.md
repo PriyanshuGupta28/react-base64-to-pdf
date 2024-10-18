@@ -22,7 +22,7 @@
 
 <h3>Basic Example</h3>
 
-<pre><code>import React from 'react';
+<pre><code>import React, { useEffect, useState } from "react";
 import { PDFInfo, PDFPreview, PDFDownloadButton } from 'react-base64-to-pdf';
 
 const App = () => {
@@ -33,7 +33,7 @@ const App = () => {
       &lt;h1&gt;PDF Viewer Example&lt;/h1&gt;
       
       {/* Show PDF Information */}
-      &lt;PDFInfo base64={base64Pdf} showDownloadButton={true} showPreview={true} /&gt;
+      &lt;PDFInfo base64={base64Pdf} /&gt;
 
       {/* Download PDF Button */}
       &lt;PDFDownloadButton 
