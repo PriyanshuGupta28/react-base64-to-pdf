@@ -99,7 +99,7 @@ export default App;</code></pre>
 
 <h2>Contact</h2>
 
-<p>For any inquiries or feedback, feel free to reach out at <a href="mailto:28priyanshu2001.com">your-email@example.com</a>.</p>
+<p>For any inquiries or feedback, feel free to reach out at <a href="mailto:28priyanshu2001.com">28priyanshu2001</a>.</p>
 
 </body>
 </html>
