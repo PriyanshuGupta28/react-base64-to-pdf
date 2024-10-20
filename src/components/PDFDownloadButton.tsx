@@ -1,11 +1,5 @@
 import React from "react";
-
-interface PDFDownloadButtonProps {
-  base64: string;
-  downloadFileName?: string;
-  style?: React.CSSProperties;
-  className?: string;
-}
+import { PDFDownloadButtonProps } from "../types";
 
 const PDFDownloadButton: React.FC<PDFDownloadButtonProps> = ({
   base64,
