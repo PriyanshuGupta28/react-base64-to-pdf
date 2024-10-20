@@ -1,11 +1,12 @@
 {
   "name": "react-base64-to-pdf",
-  "version": "1.1.2",
-  "description": "",
-  "main": "index.js",
+  "version": "1.2.2",
+  "description": "A React library for rendering Base64-encoded PDF files and providing download options.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "tsc"
+    "build": "tsup"
   },
   "keywords": [
     "react",
@@ -20,15 +21,19 @@
   "license": "MIT",
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "tsup": "^8.3.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/PriyanshuGupta28/react-base64-to-pdf.git"
   },
   "devDependencies": {
+    "@swc/core": "^1.7.36",
+    "@types/node": "^22.7.6",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
+    "tsup": "^8.3.0",
     "typescript": "^5.6.3"
   }
 }
