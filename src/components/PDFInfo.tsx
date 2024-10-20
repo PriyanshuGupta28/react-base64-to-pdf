@@ -1,8 +1,5 @@
 import React, { useEffect, useState } from "react";
-
-interface PDFInfoProps {
-  base64: string;
-}
+import { PDFInfoProps } from "../types";
 
 const PDFInfo: React.FC<PDFInfoProps> = ({ base64 }) => {
   const [fileSize, setFileSize] = useState<number | null>(null);
