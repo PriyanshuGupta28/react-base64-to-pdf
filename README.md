@@ -32,6 +32,9 @@ const App = () => {
     &lt;div&gt;
       &lt;h1&gt;PDF Viewer Example&lt;/h1&gt;
       
+      {/* Show PDF Preview */}
+      &lt;PDFPreview base64={base64Pdf} style={{width: 100vw, height : 100vh}} className="yourClassNameGoesHere"/&gt;
+
       {/* Show PDF Information */}
       &lt;PDFInfo base64={base64Pdf} /&gt;
 
@@ -56,40 +59,34 @@ export default App;</code></pre>
 <h2>Components</h2>
 
 <h3>PDFInfo</h3>
-
-<p>Displays the information of the PDF file such as file size, PDF version, creation date, modification date, and creator tool.</p>
-
+<p><strong>Description:</strong> This component displays essential information about the PDF file, including its file size, PDF version, creation date, modification date, and the tool used to create it.</p>
 <div class="props">
-    <strong>Props</strong>
+    <strong>Props:</strong>
     <ul>
-        <li><code>base64</code> (string): The Base64-encoded PDF string.</li>
-        <li><code>showDownloadButton</code> (boolean): (Optional) Whether to display the download button. Default is <code>false</code>.</li>
-        <li><code>showPreview</code> (boolean): (Optional) Whether to show the PDF preview. Default is <code>false</code>.</li>
+        <li><code>base64</code> (string): The Base64-encoded string of the PDF file.</li>
     </ul>
 </div>
 
 <h3>PDFPreview</h3>
-
-<p>Renders a preview of the PDF file.</p>
-
+<p><strong>Description:</strong> This component renders a visual preview of the PDF file, allowing users to view its contents directly within the application.</p>
 <div class="props">
-    <strong>Props</strong>
+    <strong>Props:</strong>
     <ul>
-        <li><code>base64</code> (string): The Base64-encoded PDF string.</li>
+        <li><code>base64</code> (string): The Base64-encoded string of the PDF file.</li>
+        <li><code>style</code> (React.CSSProperties, optional): Custom styles for the preview component, specified as an object (e.g., <code>style={{...}}</code>).</li>
+        <li><code>className</code> (string, optional): Additional CSS class names for styling.</li>
     </ul>
 </div>
 
 <h3>PDFDownloadButton</h3>
-
-<p>Provides a button to download the PDF file.</p>
-
+<p><strong>Description:</strong> This component provides a button that users can click to download the PDF file.</p>
 <div class="props">
-    <strong>Props</strong>
+    <strong>Props:</strong>
     <ul>
-        <li><code>base64</code> (string): The Base64-encoded PDF string.</li>
-        <li><code>downloadFileName</code> (string): (Optional) The name of the downloaded file. Default is <code>file.pdf</code>.</li>
-        <li><code>style</code> (React.CSSProperties): (Optional) Custom styles for the button.</li>
-        <li><code>className</code> (string): (Optional) Custom class names for additional styling.</li>
+        <li><code>base64</code> (string): The Base64-encoded string of the PDF file.</li>
+        <li><code>downloadFileName</code> (string, optional): The name for the downloaded file. If not provided, the default name is <code>file.pdf</code>.</li>
+        <li><code>style</code> (React.CSSProperties, optional): Custom styles for the button.</li>
+        <li><code>className</code> (string, optional): Additional CSS class names for further customization.</li>
     </ul>
 </div>
 
