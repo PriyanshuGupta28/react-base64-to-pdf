@@ -1,23 +1,27 @@
 import React from "react";
-
-interface PDFPreviewProps {
-  base64: string;
-  width?: string;
-  height?: string;
-}
+import { PDFPreviewProps } from "../types";
 
 const PDFPreview: React.FC<PDFPreviewProps> = ({
   base64,
-  width = "100%",
-  height = "842pt",
+  style,
+  className,
 }) => {
+  if (!base64) {
+    return <p>No PDF data provided.</p>;
+  }
+
   return (
     <object
-      style={{ width, height }}
+      style={style}
       type="application/pdf"
+      className={className}
       data={`data:application/pdf;base64,${base64}`}
+      aria-label="PDF preview"
     >
-      PDF cannot be displayed.
+      Your browser does not support PDFs. Download the PDF to view it:
+      <a href={`data:application/pdf;base64,${base64}`} download="document.pdf">
+        Download PDF
+      </a>
     </object>
   );
 };
